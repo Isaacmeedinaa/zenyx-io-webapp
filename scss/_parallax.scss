@@ -1,0 +1,172 @@
+/* 
+---------------------------------------------
+parallax
+--------------------------------------------- 
+*/
+
+.parallax {
+	min-height: 215px;
+	overflow: hidden;
+	position: relative;
+	padding-top: 60px;
+	padding-bottom: 60px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 140%;
+		height: 140%;
+		opacity: .88;
+		background-image: linear-gradient(127deg, $gradientDark 0%, $gradientLight 91%);
+		z-index: 2;
+		top: -20%;
+		left: -20%;
+	}
+
+	.parallax-content {
+		position: relative;
+		z-index: 3;
+
+		
+		.info {
+			text-align: center;
+
+			p {
+				@include font($medium, 22px);
+				color: #fff;
+				letter-spacing: 1.38px;
+				line-height: 34px;
+			}
+		}
+
+		.download-btn-content {
+			text-align: center;
+			margin-top: 60px;
+
+			.btn-download {
+				display: block;
+				@include radius(100px);
+				overflow: hidden;
+				text-align: center;
+				position: relative;
+				@include transition(.3s);
+
+				&:hover {
+					margin-top: -15px;
+				}
+
+				i {
+					display: inline-block;
+					height: 30px;
+					line-height: 38px;
+					margin-right: 5px;
+					color: #fff;
+					position: relative;
+					z-index: 2;
+					@include transition(.3s);
+					display: block;
+					font-size: 24px;
+					margin-bottom: 15px;
+				}
+
+				strong {
+					display: inline-block;
+					@include font($bold, 16px);
+					color: #fff;
+					letter-spacing: 1px;
+					position: relative;
+					z-index: 2;
+					@include transition(.3s);
+					display: block;
+				}
+
+				span {
+					@include font($normal, 12px);
+					color: #fff;
+					letter-spacing: 0.75px;
+				}
+			}
+		}
+
+		.subscribe-wrapper {
+			height: 46px;
+			margin-top: 60px;
+			background: #fff;
+			@include radius(100px);
+			overflow: hidden;
+			position: relative;
+			margin-bottom: 10px;
+
+			input {
+				position: absolute;
+				z-index: 1;
+				width: 100%;
+				height: 100%;
+				outline: none;
+				padding-left: 20px;
+				padding-right: 120px;
+				@include font($medium, 12px);
+				letter-spacing: 0.67px;
+				border: none;
+
+				&::-webkit-input-placeholder {
+					color: $textDark;
+				}
+
+				&:-moz-placeholder {   
+					color: $textDark;
+				}
+			}
+
+			button {
+				position: absolute;
+				z-index: 2;
+				height: 42px;
+				right: 2px;
+				top: 2px;
+				@include font($bold, 12px);
+				letter-spacing: 0.27px;
+				color: #FFFFFF;
+				padding-left: 20px;
+				padding-right: 20px;
+				background: $primaryColor;
+				@include radius(100px);
+				border: none;
+				outline: none;
+				cursor: pointer;
+			}
+		}
+
+		.subscribe-info {
+			display: block;
+			text-align: center;
+			@include font($normal, 14px);
+			color: #FFFFFF;
+			letter-spacing: 0.67px;
+		}
+	}
+}
+
+
+@media (max-width : 991px) {
+	.parallax {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		min-height: auto;
+
+		.parallax-content {
+			position: relative !important;
+			top: 0% !important;
+			transform: perspective(1px) translateY(0%) !important;
+
+			.download-btn-content {
+				
+				.btn-download {
+					&:hover {
+						margin-top: 0px;
+					}
+				}
+			}
+		}
+	}
+}

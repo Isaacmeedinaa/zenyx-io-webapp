@@ -1,0 +1,105 @@
+/* 
+---------------------------------------------
+faq
+--------------------------------------------- 
+*/
+
+.faq {
+	background: #FFFFFF;
+	box-shadow: 0 2px 48px 0 rgba(0,0,0,0.06);
+	border-radius: 5px;
+	overflow: hidden;
+
+	.card {
+		border: none;
+		background: none;
+		border-bottom: 1px solid #f8f8f8;
+		@include radius(0px);
+
+		.card-header {
+			padding: 0px;
+			border: none;
+			background: none;
+			@include transition(.3s);
+
+			&:hover {
+				background: #f8f8f8;
+				
+				.faq-title {
+					padding-left: 40px;
+				}
+			}
+
+			&:first-child {
+				@include radius(0px);
+			}
+
+			.faq-title {
+				width: 100%;
+				text-align: left;
+				padding: 0px;
+				padding-left: 30px;
+				padding-right: 30px;
+				@include font($normal, 15px);
+				letter-spacing: 1px;
+				color: $headingDark;
+				text-decoration: none !important;
+				@include transition(.3s);
+				cursor: pointer;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				position: relative;
+
+				&:before {
+					content: '';
+					position: absolute;
+					width: 3px;
+					height: 100%;
+					background: $primaryColor;
+					left: 0px;
+					top: 0px;
+				}
+			}
+		}
+
+		.card-body {
+			padding: 30px;
+			padding-left: 35px;
+			padding-bottom: 16px;
+			@include font($normal, 16px);
+			color: $textDark;
+			line-height: 28px;
+			letter-spacing: 1px;
+			border-top: 1px solid #F3F8FF;
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 3px;
+				height: 100%;
+				background: $secondaryColor;
+				left: 0px;
+				top: 0px;
+			}
+
+			p {
+				margin-bottom: 14px;
+			}
+		}
+	}
+}
+
+@media (max-width : 991px) {
+	.faq {
+		margin-bottom: 30px;
+		
+		.card {
+			.card-header {
+				.faq-title {
+					line-height: 26px;
+				}
+			}
+		}
+	}
+}

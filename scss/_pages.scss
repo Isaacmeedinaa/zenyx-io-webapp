@@ -1,0 +1,130 @@
+/* 
+---------------------------------------------
+pages
+--------------------------------------------- 
+*/
+
+.page {
+	background: #fff;
+	margin-top: 80px;
+
+	.cover {
+		min-height: 170px;
+		position: relative;
+		overflow: hidden;
+		background: #F4F8FB;
+
+		.page-top {
+			position: absolute;
+			width: 100%;
+			bottom: 45px;
+			z-index: 3;
+
+			h1 {
+				@include font($normal, 36px);
+				line-height: 46px;
+				letter-spacing: 1.4px;
+				color: $headingDark;
+				text-align: center;
+			}
+
+			.breadcrumb {
+				float: none;
+				@include radius(0px);
+				background: none;
+				padding: 0px;
+				margin-top: 8px;
+				margin-bottom: 0px;
+				display: block;
+				text-align: center;
+
+				li {
+					@include font($normal, 14px);
+					color: $textDark;
+					line-height: 30px;
+					margin-left: 10px;
+					display: inline-block;
+
+					&:after {
+						font-family: FontAwesome;
+						content: "\f105";
+						margin-left: 10px;
+						color: $textDark;
+					}
+
+					&:first-child {
+						margin-left: 0px;
+					}
+
+					&:last-child {
+						&:after {
+							content: '';
+							margin-left: 0px;
+						}
+					}
+
+					a {
+						@include font($normal, 14px);
+						color: $headingDark;
+					}
+				}
+			}
+		}
+	}
+
+	.page-bottom {
+		padding-top: 100px;
+		padding-bottom: 70px;
+		@include font($normal, 16px);
+		letter-spacing: 0.88px;
+		line-height: 28px;
+		color: $textDark;
+
+		p {
+			margin-bottom: 28px;
+		}
+
+		.features-small-item {
+			background: #fff;
+		}
+
+		.page-detail {
+			.image {
+				@include radius(5px);
+				margin-bottom: 30px;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+@media (max-width : 991px) {
+	.page {
+		.cover {
+			min-height: auto;
+			padding-top: 50px;
+			padding-bottom: 50px;
+
+			.page-top {
+				text-align: center;
+				position: relative;
+				bottom: auto;
+
+				h1 {
+					font-size: 26px !important;
+					line-height: 36px !important;
+				}
+
+				.breadcrumb {
+					float: none;
+					text-align: center;
+					display: block;
+
+					li {
+						display: inline;
+					}
+				}
+			}
+		}
+	}	
+}
