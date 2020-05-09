@@ -95,7 +95,7 @@
 				// Home Parallax Subscribe
 				if($('#subscribe').length){
 					$('#subscribe').parallax({
-						imageSrc: 'assets/images/photos/parallax-subscribe.jpg',
+						imageSrc: 'assets/images/photos/parallax.jpg',
 						zIndex: '1'
 					});
 				}
