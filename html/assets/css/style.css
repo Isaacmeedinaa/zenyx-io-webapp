@@ -2775,7 +2775,7 @@ preloader
   width: 25px;
   height: 25px;
   border-radius: 100%;
-  background-image: linear-gradient(135deg, #318AD6 0%, #735ED5 100%);
+  background-image: linear-gradient(135deg, #252324 0%, #757374 100%);
 }
 
 .loader-wrapper .loader .bubble-2 {
