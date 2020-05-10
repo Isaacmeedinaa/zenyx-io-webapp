@@ -8,20 +8,20 @@ router.get('/', function (req, res, next) {
   })
 });
 
-router.get('/index', function (req, res, next) {
+router.get('/index.html', function (req, res, next) {
   res.sendFile('public/index.html', {
       root: "./"
   })
 });
 
 
-router.get('/about', function (req, res, next) {
+router.get('/about.html', function (req, res, next) {
   res.sendFile('public/about.html', {
       root: "./"
   })
 });
 
-router.get('/contact', function (req, res, next) {
+router.get('/contact.html', function (req, res, next) {
   res.sendFile('public/contact.html', {
       root: "./"
   })
