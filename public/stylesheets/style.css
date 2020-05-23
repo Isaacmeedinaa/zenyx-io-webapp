@@ -389,6 +389,7 @@ blockquote .author {
   margin-bottom: 30px;
 }
 
+
 @media (max-width: 991px) {
   html, body {
     overflow-x: hidden;
