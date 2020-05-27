@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 
 var app = express();
+var port = 1003
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,8 +41,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(1003, () => {
-  console.log('CONNECTED');
+app.listen(port, () => {
+  console.log(`Connected to port ${port}`);
 });
 
 module.exports = app;
